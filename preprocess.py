@@ -1,7 +1,7 @@
 from numpy import *
 import csv
-inp = open('D:\Python\Heart Disease\dataset1.csv','r')
-out = open('D:\Python\Heart Disease\dataset_new.csv','w') 
+inp = open('D:\Mini_Project\dataset1.csv','r')
+out = open('D:\Mini_Project\dataset_new.csv','w') 
 
 writer = csv.writer(out)
 
