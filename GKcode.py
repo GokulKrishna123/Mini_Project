@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+import numpy as np
+import pandas as pd
+data=pd.read_csv("dataset1.csv")
+data_new=pd.read_csv("dataset1.csv",na_values=['?'])
+#data_new=data_new[['age','sex','chest_pain','bp','cholesterol','sugar','ec_result','heart_rate','induced_agina','st_depression','slope','no_vessels','thalassemia','pred_value']]
+data_new.dropna(inplace=True)
+predictions=data_new['pred_value']
+data_new
+features_raw = data_new[['age','sex','chest_pain','bp','cholesterol','sugar','ec_result','heart_rate','induced_agina','st_depression','slope','no_vessels','thalassemia']]
+from sklearn.model_selection import train_test_split
+
+predict_class = predictions.apply(lambda x: 0 if x == 0 else 1)
+np.random.seed(1234)
+
+X_train, X_test, y_train, y_test = train_test_split(features_raw, predict_class, train_size=0.80, random_state=1)
+
+
+# Show the results of the split
+print "Training set has {} samples.".format(X_train.shape[0])
+print "Testing set has {} samples.".format(X_test.shape[0])
+
