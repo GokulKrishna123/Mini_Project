@@ -33,4 +33,24 @@ from sklearn.metrics import fbeta_score
 predictions_test = svc.predict(X_test)
 predictions_test
 
+from sklearn.metrics import accuracy_score
+print accuracy_score(y_test, predictions_test)
+
+import sklearn
+import numpy as np
+import pandas as pd
+dataframe = pd.read_csv("newdataset.csv")
+array = dataframe.values
+X = array[:,0:13]
+Y = array[:,13]
+from sklearn.feature_selection import SelectKBest
+from sklearn.feature_selection import chi2
+test = SelectKBest(score_func=chi2, k=8)
+fit = test.fit(X,Y)
+# Summarize scores
+np.set_printoptions(precision=3)
+print(fit.scores_)
+features = fit.transform(X)
+# Summarize selected features
+print(features[0:10,:])
 
