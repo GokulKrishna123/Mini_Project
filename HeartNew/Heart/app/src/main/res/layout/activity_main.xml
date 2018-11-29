@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="20dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_centerInParent="true"
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<RelativeLayout
+    android:layout_centerInParent="true"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+
+    <EditText
+        android:hint="Age"
+        android:maxLength="2"
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textAlignment="center"
+        />
+
+
+
+    <Spinner
+
+
+        android:layout_below="@+id/editText1"
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+
+        />
+
+    <EditText
+        android:maxLength="3"
+        android:hint="Heart Rate"
+        android:layout_below="@+id/editText3"
+        android:id="@+id/editText8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:maxLength="3"
+        android:hint="Cholosterol"
+        android:layout_below="@+id/editText8"
+        android:id="@+id/editText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:maxLength="1"
+        android:hint="Sugar (if yes type 1 no type 0)"
+        android:layout_below="@+id/editText5"
+        android:id="@+id/editText6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textAlignment="center"
+         />
+
+    <EditText
+        android:maxLength="3"
+        android:hint="Blood Pressure"
+        android:layout_below="@+id/editText6"
+        android:id="@+id/editText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:maxLength="3"
+        android:hint="EC Result"
+        android:layout_below="@+id/editText4"
+        android:id="@+id/editText7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textAlignment="center"
+         />
+
+    <EditText
+        android:maxLength="1"
+        android:hint="Induced Agina (1 or 0)"
+        android:layout_below="@+id/editText7"
+        android:id="@+id/editText9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textAlignment="center"
+       />
+
+    <EditText
+        android:maxLength="1"
+        android:hint="Depression Rate (scale 1 to 3)"
+        android:layout_below="@+id/editText9"
+        android:id="@+id/editText10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textAlignment="center"
+         />
+
+    <Spinner
+
+
+        android:layout_below="@+id/editText10"
+        android:id="@+id/editText11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textAlignment="center"
+         />
+
+    <EditText
+        android:maxLength="1"
+        android:hint="No:Of Vessels (1 to 4)"
+        android:layout_below="@+id/editText11"
+        android:id="@+id/editText12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textAlignment="center"
+         />
+    <Spinner
+
+        android:spinnerMode="dropdown"
+
+        android:layout_below="@+id/editText12"
+        android:id="@+id/thalassemia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+    />
+
+    <RadioGroup
+        android:gravity="center"
+        android:layout_below="@+id/thalassemia"
+        android:id="@+id/r0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/r1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+       />
+
+        <RadioButton
+            android:id="@+id/r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+             />
+    </RadioGroup>
+    <Button
+
+        android:layout_centerHorizontal="true"
+        android:foregroundGravity="center"
+        android:layout_below="@+id/r0"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Predict"
+        android:textColor="#F01"
+        />
+
+</RelativeLayout>
+</ScrollView>
+
+
