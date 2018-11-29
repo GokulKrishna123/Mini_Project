@@ -34,3 +34,33 @@ predictions_test = svc.predict(X_test)
 predictions_test
 
 
+
+from sklearn.model_selection import cross_val_score
+
+C = 1.0
+svc = svm.SVC(kernel='linear',C=C,gamma=2)
+cv_scores = cross_val_score(svc, feature_data, predict_class, cv=2)
+cv_scores.mean()
+
+
+from sklearn.metrics import accuracy_score
+print accuracy_score(y_test, predictions_test)
+
+
+import sklearn
+import numpy as np
+import pandas as pd
+dataframe = pd.read_csv("newdataset.csv")
+array = dataframe.values
+X = array[:,0:13]
+Y = array[:,13]
+from sklearn.feature_selection import SelectKBest
+from sklearn.feature_selection import chi2
+test = SelectKBest(score_func=chi2, k=8)
+fit = test.fit(X,Y)
+# Summarize scores
+np.set_printoptions(precision=3)
+print(fit.scores_)
+features = fit.transform(X)
+# Summarize selected features
+print(features[0:10,:])
