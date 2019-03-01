@@ -2,7 +2,7 @@ from numpy import *
 import csv
 inp = open('D:\Mini_Project\dataset1.csv','r')
 out = open('D:\Mini_Project\dataset_new.csv','w') 
-
+print("hai")
 writer = csv.writer(out)
 
 for row in csv.reader(inp):
